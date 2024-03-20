@@ -1,0 +1,47 @@
+.footer {
+    font-family: 'Bubbler One', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: .15rem;
+    background: var(--background);
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.5);
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-column {
+    padding: 1em;
+}
+
+.footer-column h1 {
+    font-size: 1.5em;
+}
+
+.footer-column h2 {
+    font-size: 1.2em;
+}
+
+.footer-column p {
+    font-size: 0.75em;
+}
+
+.logo-column {
+    display: flex;
+    justify-content: flex-end;
+    flex: 0.5;
+}
+
+.center-image {
+    display: flex;
+    justify-content: center;
+}
+
+.center-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
