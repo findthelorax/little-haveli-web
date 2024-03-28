@@ -28,3 +28,58 @@
     border-radius: 5px;
     transform: translateX(0px) translateY(0px);
 }
+
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 75vh;
+    border-bottom: 1px solid black;
+}
+
+.left-side {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    border-right: 1px solid black;
+}
+
+.right-side {
+    display: grid;
+    border-bottom: 1px solid black;
+}
+
+.section {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.section:nth-child(3) {
+    border-top: 1px solid black;
+}
+
+.section:nth-child(4) {
+    border-top: 1px solid black;
+}
+
+.section:nth-child(even) {
+    border-left: 1px solid black;
+}
+
+.contact-bg {
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 100%, rgba(255,255,255,.8) 100%);
+
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .left-side {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+}
