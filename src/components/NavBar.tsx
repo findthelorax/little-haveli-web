@@ -15,12 +15,12 @@ export default function Navbar() {
 
     return (
         <div className='nav-container sticky top-0 z-50 backdrop-blur-sm w-full mx-auto'>
-            <nav className="flex items-center justify-between navbar">
+            <nav className="flex items-center justify-center navbar">
                 <Link href="/">
                     <img
                         src="/assets/little-haveli-logo.jpg"
                         alt="Little Haveli"
-                        className="w-28 h-auto nav-icon cursor-pointer"
+                        className="w-28 h-auto mr-20 nav-icon cursor-pointer"
                     />
                 </Link>
                 <div className='space-x-4 hidden lg:flex'>

@@ -8,6 +8,7 @@ import ToTopBtn from '@/components/ToTopBtn';
 import AwardBadge from '@/components/AwardBadge';
 import GrocerySection from '@/components/Grocery';
 import SpecialsCard from '@/components/SpecialsCard';
+import HomeSection from '@/components/Home/HomeSection';
 
 export default function Home() {
 
@@ -15,8 +16,7 @@ export default function Home() {
         <div className="flex flex-col min-h-screen home-bg">
 			<Navbar />
             <main className="flex-grow">
-			<HomeCard />
-			<AwardBadge />
+			<HomeSection />
 			<SpecialsCard />
 			<GrocerySection />
 			{/* <AwardCard /> */}
