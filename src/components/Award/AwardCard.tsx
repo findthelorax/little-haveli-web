@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import awardImage from '../../public/assets/award2.svg';
-import outsideImage from '../../public/assets/outside.jpg';
+import awardImage from '/public/assets/award2.svg';
+import outsideImage from '/public/assets/outside.jpg';
 
 const AwardCard: React.FC = () => {
     return (

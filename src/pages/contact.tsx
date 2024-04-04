@@ -1,7 +1,7 @@
 'use client'
 import Navbar from '@/components/NavBar';
 import Footer from '@/components/Footer';
-import ContactSection from '@/components/ContactSection';
+import ContactSection from '@/components/Contact/ContactSection';
 
 export default function Contact() {
 

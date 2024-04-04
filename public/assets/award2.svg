@@ -40,13 +40,13 @@
             <path id="curvedTextPathRG" d="M34,86a40,53 0 1,0 58,-120" />
         </defs>
         <text
-            style="fill:#000;font-size:9px;stroke:#000;stroke-width:0.5px;letter-spacing:.5px"
+            style="fill:#000;font-size:9px;stroke:#000;stroke-width:0.5px;letter-spacing:.5px; font-family: 'Kalam'"
         >
             <textPath href="#curvedTextPathR">RECOMMENDED</textPath>
         </text>
 
         <text
-            style="fill:#000;font-size:8px;stroke:#000;stroke-width:0.5px;letter-spacing:.5px"
+            style="fill:#000;font-size:8px;stroke:#000;stroke-width:0.5px;letter-spacing:.5px; font-family: 'Kufam'"
         >
             <textPath href="#curvedTextPathRG">
                 RESTAURANT GURU
@@ -68,7 +68,7 @@
             x="46"
             y="69"
             transform="rotate(-11.9 55,180)"
-            style="fill:#fff;font-size:11px;stroke:#fff;stroke-width:0.5px;letter-spacing:.75px"
+            style="fill:#fff;font-size:11px;stroke:#fff;stroke-width:0.5px;letter-spacing:.75px;font-family: 'Kufam'"
         >
             LITTLE HAVELI
         </text>

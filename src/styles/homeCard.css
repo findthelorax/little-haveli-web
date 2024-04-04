@@ -1,10 +1,11 @@
 .home-section {
     position: relative;
-    background: url('/assets/bg3.jpg') no-repeat center fixed;
+    /* background: url('/assets/bg3.jpg') no-repeat center fixed; */
+    background-color: var(--orange);
     background-size: cover;
 }
 
-.home-section::before {
+/* .home-section::before {
     content: "";
     position: absolute;
     top: 0;
@@ -12,61 +13,49 @@
     bottom: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.5);
-}
+} */
 
 .home-card-container {
-    position: relative;
+    margin-right: 50px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .home-card {
-	font-weight: 900;
 	border-radius: 10px;
-	text-shadow: 0px 0px 1px black;
 }
 
 .home-card-title {
-    font-family: 'Bubbler One';
-	color: var(--main);
-    font-weight: 900;
-	font-size: 32px;
-	text-shadow: 0px 0px 1px var(--main), 0 0 2px var(--main), 0 1px 1px var(--main), 1px 0 1px var(--main),
-		-1px 0 1px var(--main), 0 -1px 1px var(--main);
+	font-size: 42px;
 }
 
 .home-card-text {
-    font-family: 'Marmelad';
-    font-weight: 800;
     font-size: 20px;
 	color: #ffffff;
 }
 
 .grocery-card {
-    font-family: 'Marmelad';
-    font-weight: 900;
     max-width: 500px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.9);
-    text-shadow: 0px 0px 1px black;
+    border-radius: 20px;
+    background: var(--background);
 }
 
 .grocery-card-title {
-    font-family: 'Marmelad';
     color: var(--main);
-    font-weight: 900;
     font-size: 32px;
     text-shadow: 0px 0px 1px var(--main), 0 0 2px var(--main), 0 1px 1px var(--main), 1px 0 1px var(--main),
         -1px 0 1px var(--main), 0 -1px 1px var(--main);
 }
 
 .grocery-image {
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .specials-card {
     font-weight: 900;
     max-width: 350px;
-    border-radius: 10px;
+    border-radius: 20px;
     text-align: center;
-    background: rgba(59, 163, 59);
-    text-shadow: 0px 0px 1px black;
+    background: var(--background);
+    box-shadow: 5px 5px 0px 5px black;
 }

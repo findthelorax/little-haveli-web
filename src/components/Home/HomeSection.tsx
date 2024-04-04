@@ -1,12 +1,18 @@
 import React from 'react';
-import HomeCard from '../HomeCard';
-import AwardBadge from '../AwardBadge';
+import HomeCard from './HomeCard';
+import SpecialsCard from '../Specials/SpecialsCard';
+import MenuScroll from '../Menu/MenuScroll';
 
 const HomeSection: React.FC = () => {
     return (
-        <section className='home-section'>
+        <section className='home-section h-[85vh]'>
+            <div className='flex justify-between'>
             <HomeCard />
-            <AwardBadge />
+            <SpecialsCard />
+            </div>
+            <div className='mt-[6%]'>
+            <MenuScroll />
+            </div>
         </section>
     );
 }

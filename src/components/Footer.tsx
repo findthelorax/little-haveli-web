@@ -23,8 +23,8 @@ const Footer: React.FC = () => {
 				</div>
 				<div className="footer-column">
 					<h2 className="pb-4">We Accept</h2>
-					<div className="center-image mt-3">
-						<Image src="/assets/accepted-ccs.jpg" alt="Accepted credit cards" width={250} height={150} />
+					<div className="center-image">
+						<Image src="/assets/accepted-ccs.png" alt="Accepted credit cards" width={250} height={150} />
 					</div>
 				</div>
 				<div className="footer-column">

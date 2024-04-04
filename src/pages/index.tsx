@@ -1,14 +1,13 @@
 'use client'
 import Navbar from '@/components/NavBar';
 import Footer from '@/components/Footer';
-import HomeCard from '@/components/HomeCard';
-import AwardCard from '@/components/AwardCard';
-import ReviewCards from '@/components/ReviewCards';
+import ReviewCards from '@/components/Reviews/ReviewCards';
 import ToTopBtn from '@/components/ToTopBtn';
-import AwardBadge from '@/components/AwardBadge';
-import GrocerySection from '@/components/Grocery';
-import SpecialsCard from '@/components/SpecialsCard';
+import GrocerySection from '@/components/Grocery/Grocery';
+import SpecialsCard from '@/components/Specials/SpecialsCard';
 import HomeSection from '@/components/Home/HomeSection';
+import MenuPage from '@/components/Menu/MenuPage';
+import MenuScroll from '@/components/Menu/MenuScroll';
 
 export default function Home() {
 
@@ -17,10 +16,9 @@ export default function Home() {
 			<Navbar />
             <main className="flex-grow">
 			<HomeSection />
-			<SpecialsCard />
 			<GrocerySection />
-			{/* <AwardCard /> */}
 			<ReviewCards />
+			{/* <MenuPage /> */}
 			<ToTopBtn />
 			</main>
 			<Footer />

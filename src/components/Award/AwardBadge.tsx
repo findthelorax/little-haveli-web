@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import awardImage from '../../public/assets/award2.svg';
+import awardImage from '/public/assets/award2.svg';
 
 const AwardBadge: React.FC = () => {
     return (
