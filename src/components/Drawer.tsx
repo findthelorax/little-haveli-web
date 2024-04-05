@@ -1,6 +1,7 @@
 import { AiOutlineClose } from 'react-icons/ai';
 import Link from 'next/link';
 import { useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 interface DrawerProps {
     isOpen: boolean;
@@ -36,10 +37,12 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
             ))}
             <div className="drawer-footer">
                 <Link href="/">
-                    <img
+                    <Image
                         src="/assets/little-haveli-logo.jpg"
                         alt="Little Haveli"
                         className="w-28 h-auto nav-icon cursor-pointer"
+                        width={100}
+                        height={100}
                         onClick={onClose}
                     />
                 </Link>
