@@ -30,8 +30,8 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
             <button className="close-button" onClick={onClose}>
                 <AiOutlineClose size={30} color='#b52e13'/>
             </button>
-            {menuItems.map((item) => (
-                <Link href={item === 'HOME' ? '/' : `/${item.toLowerCase()}`}>
+            {menuItems.map((item, index) => (
+                <Link key={index} href={item === 'HOME' ? '/' : `/${item.toLowerCase()}`}>
                     <span className="nav-button cursor-pointer" onClick={onClose}>{item}</span>
                 </Link>
             ))}
