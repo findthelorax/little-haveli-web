@@ -6,7 +6,7 @@ import ToTopBtn from '@/components/ToTopBtn';
 import GrocerySection from '@/components/Grocery/Grocery';
 import SpecialsCard from '@/components/Specials/SpecialsCard';
 import HomeSection from '@/components/Home/HomeSection';
-import MenuPage from '@/components/Menu/MenuPage';
+import MenuPage from '@/components/Menu/Menu';
 import MenuScroll from '@/components/Menu/MenuScroll';
 
 export default function Home() {
