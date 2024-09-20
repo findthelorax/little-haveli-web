@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Little Haveli - Authentic Indian Cuisine
 
-## Getting Started
+Welcome to **Little Haveli**, your go-to destination for authentic Indian cuisine. Our website offers a seamless experience to explore our menu, specials, and customer reviews.
 
-First, run the development server:
+![Little Haveli](/public/assets/little-haveli-logo.jpg)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## About Us
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Created by Brett Ferrante.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Menu**: Browse our extensive menu featuring a variety of Indian dishes.
+- **Specials**: Check out our daily specials and seasonal offerings.
+- **Reviews**: Read reviews from our satisfied customers.
+- **Contact Us**: Get in touch with us for reservations or inquiries.
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend**: React, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **API**: Google Places API for fetching reviews
+- **Deployment**: Vercel/Netlify
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To run this project locally, follow these steps:
 
-## Deploy on Vercel
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/little-haveli.git
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Navigate to the project directory:
+    ```bash
+    cd little-haveli
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Start the development server:
+    ```bash
+    npm start
+    ```
