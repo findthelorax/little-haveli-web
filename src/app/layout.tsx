@@ -5,8 +5,8 @@ import "@/styles/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Brett's Profile",
-  description: "Brett Ferrante web developer profile website built with next.js and tailwind css.",
+  title: "Little Havelli",
+  description: "Amazing Indian food where culinary craft meets community spirit.",
 };
 
 export default function RootLayout({

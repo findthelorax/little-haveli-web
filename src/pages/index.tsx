@@ -18,7 +18,6 @@ export default function Home() {
 			<HomeSection />
 			<GrocerySection />
 			<ReviewCards />
-			{/* <MenuPage /> */}
 			<ToTopBtn />
 			</main>
 			<Footer />
