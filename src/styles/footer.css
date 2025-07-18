@@ -13,12 +13,13 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
-    padding: 2rem 1rem;
+    padding: .5rem;
 }
 
 .footer-column {
     flex: 1 1 200px;
     text-align: center;
+    justify-content: center;
     font-size: 1rem;
 }
 .footer-column h1 {
@@ -27,10 +28,6 @@
 
 .footer-column h2 {
     font-size: 1.2em;
-}
-
-.footer-column p {
-    font-size: 0.75em;
 }
 
 .logo-column {

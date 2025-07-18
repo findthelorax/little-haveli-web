@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
 	return (
 		<footer className={`${resolvedTheme === 'dark' ? 'dark' : ''} text-center footer`}>
 			<div className="footer-columns">
-				<div className="logo-column">
+				<div className="logo-column" style={{ marginTop: '-20px' }}>
 					<Image src={logo} alt="Logo" width={150} height={150} />
 				</div>
 				<div className="footer-column content-column">

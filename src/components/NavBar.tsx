@@ -40,22 +40,22 @@ export default function Navbar() {
                         </div>
                         <div className="hidden md:flex md:flex-row md:space-x-8 items-center flex-1 justify-center min-w-0">
                             <div className="text-xs md:text-base text-center md:text-left md:mr-6 min-w-0">
-                                <p className="truncate">Store Hours: 8am-8pm</p>
-                                <p className="truncate">Restaurant: 11am-8pm</p>
+                                <p>Store Hours: 8am-8pm</p>
+                                <p>Restaurant: 11am-8pm</p>
                             </div>
                             <div className="text-xs md:text-base text-center md:text-left min-w-0">
-                                <p className="truncate">46 N. Main Street</p>
-                                <p className="truncate">(802)-855-8767</p>
+                                <p>46 N. Main Street</p>
+                                <p>(802)-855-8767</p>
                             </div>
                         </div>
-                        <div className="flex md:hidden flex-col items-center justify-center space-y-1 text-xs min-w-0">
+                        <div className="flex md:hidden flex-row space-x-8 items-center justify-center text-xs min-w-0">
                             <div className="hidden sm:block">
-                                <p className="mb-1 truncate">Store Hours: 8am-8pm</p>
-                                <p className="mb-1 truncate">Restaurant: 11am-8pm</p>
+                                <p className="mb-1">Store Hours: 8am-8pm</p>
+                                <p className="mb-1">Restaurant: 11am-8pm</p>
                             </div>
                             <div className="xs:block">
-                                <p className="mb-1 truncate">46 N. Main Street</p>
-                                <p className="mb-1 truncate">(802)-855-8767</p>
+                                <p className="mb-1">46 N. Main Street</p>
+                                <p className="mb-1">(802)-855-8767</p>
                             </div>
                         </div>
                         <div className="hidden lg:flex space-x-8 items-center pr-4">
