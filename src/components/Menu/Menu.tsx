@@ -11,46 +11,55 @@ const Menu: React.FC = () => {
     return (
         <div className="flex flex-col mt-10 items-center justify-center menu">
             <h1 className="text-center text-6xl mt-8">Menu</h1>
-            <p className="w-1/3 mt-2 text-center">
+            <p className="w-1/2 mt-2 text-center">
                 Choose from our appetizers, vegetarian, chicken, lamb main dishes, naan bread, and desserts.</p>
-            <p> Below is a key to indicate potential dietary information.
+            <p className="w-1/2 mt-2 text-center"> Below is a key to indicate potential dietary information.
             </p>
-            <p className="flex space-x-4">
+            <p className="flex space-x-4 text-center m-4">
                 <span>
-                    Vegetarian =&nbsp;
+                    Vegetarian &nbsp;
                     <VegetarianIcon />
                 </span>
                 <span>
-                    Vegan =&nbsp;
+                    Vegan &nbsp;
                     <VeganIcon />
                 </span>
                 <span>
-                    Gluten Free =&nbsp;
+                    Gluten Free &nbsp;
                     <GlutenFreeIcon />
                 </span>
                 <span>
-                    Nuts =&nbsp;
+                    Nuts &nbsp;
                     <NutsIcon />
                 </span>
                 <span>
-                    Spicy =&nbsp;
+                    Spicy &nbsp;
                     <SpicyIcon />
                 </span>
             </p>
             {['Appetizers', 'Naan', 'Mains', 'Dessert', 'Sides'].map((category) => (
-                <div key={category} className="w-1/2 mx-auto">
-                    <h2 className="text-center text-3xl mt-10 mb-5">{category}</h2>
+                <div
+                    key={category}
+                    className="w-full sm:w-3/4 md:w-1/2 mx-auto px-2"
+                >
+                    <h2 className="text-center text-2xl sm:text-3xl mt-10 mb-5">{category}</h2>
                     {MenuData.filter((item) => item.category === category).map((item) => (
-                        <div key={item.name} className="flex justify-between items-center w-full mb-6">
-                            <Image src={item.image} alt={item.name} className="rounded-lg" width={96} height={96} />
-                            <div className="flex-grow ml-4">
-                                <div className="flex justify-between items-center">
-                                    <h3 className="text-xl">{item.name}</h3>
-                                    <div className="flex-grow border-b-2 border-dotted border-black ml-2 mr-2 mt-2"></div>
-                                    <p className="text-xl">${item.price.toFixed(2)}</p>
+                        <div key={item.name} className="flex flex-col sm:flex-row justify-between items-center w-full mb-6">
+                            <Image
+                                src={item.image}
+                                alt={item.name}
+                                className="rounded-lg mb-2 sm:mb-0"
+                                width={72}
+                                height={72}
+                            />
+                            <div className="flex-grow sm:ml-4 w-full">
+                                <div className="flex flex-col sm:flex-row justify-between items-center">
+                                    <h3 className="text-lg sm:text-xl">{item.name}</h3>
+                                    <div className="hidden sm:block flex-grow border-b-2 border-dotted border-black ml-2 mr-2 mt-2"></div>
+                                    <p className="text-lg sm:text-xl">${item.price.toFixed(2)}</p>
                                 </div>
-                                <p>{item.description}</p>
-                                <div className="flex space-x-2">
+                                <p className="text-sm xs:m-4 sm:text-base">{item.description}</p>
+                                <div className="flex space-x-2  ml-4 -mt-4">
                                     {item.glutenFree && <GlutenFreeIcon />}
                                     {item.spicy && <SpicyIcon />}
                                     {item.vegan && <VeganIcon />}

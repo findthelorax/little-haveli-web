@@ -152,7 +152,7 @@ body {
 }
 
 .menu {
-	margin: 5%;
+	margin: 2rem;
 	border-radius: 20px;
 	background: linear-gradient(45deg, var(--orange), rgb(255, 227, 126));
 	box-shadow: 0 0 20px black, 20px 20px 10px 5px rgba(0, 0, 0, 0.9);

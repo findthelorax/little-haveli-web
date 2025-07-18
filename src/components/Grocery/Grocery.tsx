@@ -9,7 +9,7 @@ const GrocerySection: React.FC = () => {
                 We have a beer cave, wine selections, spices, snacks, lottery, and everyday convenience items. For questions or more details, feel free to contact us directly.
             </p>
             </div>
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid md:grid-cols-4 grid-cols-2 gap-4">
                 <div className="relative grocery-image overflow-hidden">
                     <Image src="/assets/grocery1.jpg" alt="Grocery image" fill={true} object-fit="cover" />
                 </div>

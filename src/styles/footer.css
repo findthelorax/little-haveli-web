@@ -10,14 +10,17 @@
 
 .footer-columns {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem;
 }
 
 .footer-column {
-    padding: 0 1em;
+    flex: 1 1 200px;
+    text-align: center;
+    font-size: 1rem;
 }
-
 .footer-column h1 {
     font-size: 1.5em;
 }
@@ -31,9 +34,12 @@
 }
 
 .logo-column {
+    flex-shrink: 0;
+    min-width: 120px;
+    max-width: 180px;
     display: flex;
-    justify-content: flex-end;
-    flex: 0.5;
+    justify-content: center;
+    align-items: center;
 }
 
 .center-image {

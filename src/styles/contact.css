@@ -40,7 +40,7 @@
 .contact-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 75vh;
+    min-height: 75vh;
 }
 
 .left-side {

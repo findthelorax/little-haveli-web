@@ -6,19 +6,22 @@ import AwardSVG from '../Award/AwardSVG';
 
 const HomeSection: React.FC = () => {
     return (
-        <section className='home-section h-[85vh]'>
-            <div className='flex justify-center items-center space-x-4'>
-                <div className='specials-card-container'>
+        <section className="home-section pb-12">
+            <div className="flex flex-wrap justify-center items-center gap-4">
+                <div className="specials-card-container min-w-0 w-full max-w-[300px] sm:max-w-md relative">
                     <SpecialsCard />
-                    <div className='absolute top-[14%] left-[21.75%] rotate-svg'>
-                        <AwardSVG />
+                    <div className="block sm:hidden absolute left-10 top-0">
+                        <AwardSVG className="w-36 h-36" />
+                    </div>
+                    <div className="hidden sm:block">
+                        <AwardSVG className="w-[250px] h-auto" />
                     </div>
                 </div>
                 <div>
                     <HomeCard />
                 </div>
             </div>
-            <div className='mt-[6%] mb-[10%]'>
+            <div className="mt-8 mb-12">
                 <MenuScroll />
             </div>
         </section>

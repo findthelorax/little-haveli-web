@@ -1,5 +1,4 @@
 import React from 'react';
-import AwardBadge from '../Award/AwardBadge';
 
 const HomeCard = () => {
 	return (

@@ -1,66 +1,31 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { MenuData } from './MenuData';
-import Slider from "react-slick";
 import ReactCardFlip from 'react-card-flip';
+import Marquee from 'react-fast-marquee';
 
 interface MenuItemProps {
-    image: string;
     name: string;
+    image: string;
+    price: number;
     description: string;
+    spicy: boolean;
+    glutenFree: boolean;
+    vegetarian: boolean;
+    vegan: boolean;
+    nuts: boolean;
+    category: string;
 }
 
-const settings = {
-    dots: false,
-    infinite: true,
-    speed: 2000,
-    slidesToShow: 8,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: 'linear',
-    pauseOnHover: true,
-    swipeToSlide: true,
-    responsive: [
-        {
-            breakpoint: 1600,
-            settings: {
-                slidesToShow: 6,
-                slidesToScroll: 3,
-                infinite: true,
-                dots: false
-            }
-        },
-        {
-            breakpoint: 1280,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 2,
-                initialSlide: 2
-            }
-        },
-        {
-            breakpoint: 800,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 2,
-                initialSlide: 2
-            }
-        },
-        {
-            breakpoint: 500,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        }
-    ]
-};
-
-const MenuItem = ({ item }: { item: MenuItemProps }) => {
-    const [isFlipped, setIsFlipped] = useState(false);
-
+const MenuItem = ({ item, isFlipped, onFlip }: { item: MenuItemProps; isFlipped: boolean; onFlip: (flipped: boolean) => void }) => {
     return (
-        <div onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
+        <div
+            className="mx-4 inline-block"
+            onMouseEnter={() => onFlip(true)}
+            onMouseLeave={() => onFlip(false)}
+            onClick={() => onFlip(!isFlipped)}
+            style={{ width: '12rem' }}
+        >
             <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
                 <div>
                     <div className='w-48 h-48 relative overflow-hidden menu-image' style={{ borderRadius: '20px' }}>
@@ -83,14 +48,31 @@ const MenuItem = ({ item }: { item: MenuItemProps }) => {
     );
 };
 
-const MenuScroll = () => (
-    <div className='overflow-hidden items-center justify-center text-center'>
-        <Slider {...settings}>
-            {MenuData.map((item, index) => (
-                <MenuItem key={index} item={item} />
-            ))}
-        </Slider>
-    </div>
-);
+const MenuScroll = () => {
+    const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
+
+    // Detect mobile screen
+    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
+    return (
+        <div className='overflow-hidden items-center justify-center text-center w-full'>
+            <Marquee
+                gradient={false}
+                speed={100}
+                pauseOnHover={true}
+                play={!(isMobile && flippedIndex !== null)}
+            >
+                {MenuData.map((item, index) => (
+                    <MenuItem
+                        key={index}
+                        item={item}
+                        isFlipped={flippedIndex === index}
+                        onFlip={(flipped) => setFlippedIndex(flipped ? index : null)}
+                    />
+                ))}
+            </Marquee>
+        </div>
+    );
+};
 
 export default MenuScroll;
