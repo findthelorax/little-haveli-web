@@ -145,3 +145,9 @@
 .grow-bounce {
     animation: growBounce 0.5s ease-in-out;
 }
+
+@media (max-width: 349px) {
+  .hide-below-xs {
+    display: none !important;
+  }
+}
