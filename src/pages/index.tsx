@@ -5,6 +5,7 @@ import ReviewCards from '@/components/Reviews/ReviewCards';
 import ToTopBtn from '@/components/ToTopBtn';
 import GrocerySection from '@/components/Grocery/Grocery';
 import HomeSection from '@/components/Home/HomeSection';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Home() {
     return (
@@ -23,6 +24,7 @@ export default function Home() {
                 <ToTopBtn />
             </main>
             <Footer />
+            <Analytics />
         </div>
     );
 }
