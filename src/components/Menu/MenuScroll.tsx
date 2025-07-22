@@ -51,7 +51,6 @@ const MenuItem = ({ item, isFlipped, onFlip }: { item: MenuItemProps; isFlipped:
 const MenuScroll = () => {
     const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
 
-    // Detect mobile screen
     const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
     return (
