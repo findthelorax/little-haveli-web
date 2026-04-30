@@ -20,7 +20,7 @@ interface MenuItemProps {
 const MenuItem = ({ item, isFlipped, onFlip }: { item: MenuItemProps; isFlipped: boolean; onFlip: (flipped: boolean) => void }) => {
     return (
         <div
-            className="mx-4 inline-block"
+            className="mx-4 inline-block cursor-pointer"
             onMouseEnter={() => onFlip(true)}
             onMouseLeave={() => onFlip(false)}
             onClick={() => onFlip(!isFlipped)}
@@ -50,16 +50,26 @@ const MenuItem = ({ item, isFlipped, onFlip }: { item: MenuItemProps; isFlipped:
 
 const MenuScroll = () => {
     const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
+    const [isMobile, setIsMobile] = useState(false);
 
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    React.useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+
+    const play = flippedIndex === null;
+    const pauseOnHover = !isMobile;
 
     return (
         <div className='overflow-hidden items-center justify-center text-center w-full'>
             <Marquee
                 gradient={false}
                 speed={100}
-                pauseOnHover={true}
-                play={!(isMobile && flippedIndex !== null)}
+                pauseOnHover={pauseOnHover}
+                play={play}
             >
                 {MenuData.map((item, index) => (
                     <MenuItem

@@ -11,32 +11,29 @@ const Menu: React.FC = () => {
     return (
         <div className="flex flex-col mt-10 items-center justify-center menu">
             <h1 className="text-center text-6xl mt-8">Menu</h1>
-            <p className="w-1/2 mt-2 text-center">
-                Choose from our appetizers, vegetarian, chicken, lamb main dishes, naan bread, and desserts.</p>
-            <p className="w-1/2 mt-2 text-center"> Below is a key to indicate potential dietary information.
+            <p className="w-full sm:w-3/4 md:w-1/2 mt-2 text-center">
+                Choose from our appetizers, vegetarian, chicken, lamb main dishes, naan bread, and desserts.
             </p>
-            <p className="flex space-x-4 text-center m-4">
-                <span>
-                    Vegetarian &nbsp;
-                    <VegetarianIcon />
-                </span>
-                <span>
-                    Vegan &nbsp;
-                    <VeganIcon />
-                </span>
-                <span>
-                    Gluten Free &nbsp;
-                    <GlutenFreeIcon />
-                </span>
-                <span>
-                    Nuts &nbsp;
-                    <NutsIcon />
-                </span>
-                <span>
-                    Spicy &nbsp;
-                    <SpicyIcon />
-                </span>
+            <p className="w-full sm:w-3/4 md:w-1/2 mt-2 text-center">
+                Below is a key to indicate potential dietary information.
             </p>
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-center m-4 max-w-xs sm:max-w-none">
+                <span className="flex items-center">
+                    Vegetarian&nbsp;<VegetarianIcon />
+                </span>
+                <span className="flex items-center">
+                    Vegan&nbsp;<VeganIcon />
+                </span>
+                <span className="flex items-center">
+                    Gluten Free&nbsp;<GlutenFreeIcon />
+                </span>
+                <span className="flex items-center">
+                    Nuts&nbsp;<NutsIcon />
+                </span>
+                <span className="flex items-center">
+                    Spicy&nbsp;<SpicyIcon />
+                </span>
+            </div>
             {['Appetizers', 'Naan', 'Mains', 'Dessert', 'Sides'].map((category) => (
                 <div
                     key={category}
