@@ -23,16 +23,16 @@ export default function Navbar() {
         return (
             <section className="nav-section p-2 md:p-5">
                 <div className="nav-container sticky top-0 z-50 backdrop-blur-sm">
-<nav className="flex items-center justify-between navbar relative h-20 md:h-24 w-full min-w-0 px-2">
-    <div className="flex-shrink-0 flex items-center h-16 w-16 relative min-w-0">
+<nav className="flex items-center justify-between navbar relative h-24 md:h-24 w-full min-w-0 px-2">
+    <div className="flex-shrink-0 flex items-center h-26 w-26 relative min-w-0">
         {/* Logo */}
         <Link href="/" aria-label="Home">
             <Image
-                src="/assets/little-haveli-logo.jpg"
+                src="/assets/l-h-logo.png"
                 alt="Little Haveli Logo"
                 className={`nav-icon cursor-pointer ${isClicked ? 'grow-bounce' : ''}`}
-                width={64}
-                height={64}
+                width={104}
+                height={104}
                 style={{ objectFit: 'contain' }}
                 onClick={handleImageClick}
                 priority

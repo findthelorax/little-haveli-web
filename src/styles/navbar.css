@@ -79,10 +79,6 @@
     top: 1px;
 }
 
-.nav-icon {
-	min-width: 100px;
-}
-
 .drawer {
 	transform: translateX(-100%);
 	transition: transform 0.3s ease-in-out;
